@@ -11,3 +11,5 @@
 Manifest v2 的兼容读取、恢复边界与持久化顺序见 [Windows 工作区身份和派生索引](adr/0002-windows-index.md)。
 
 [Manifest v3 的协调、迁移和恢复](adr/0004-file-reconciliation.md) · [迁移后样例](examples/manifest-v3.json)
+
+[编辑会话、原始字节与安全保存](adr/0005-source-editor.md)。
