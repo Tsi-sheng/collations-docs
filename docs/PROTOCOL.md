@@ -9,3 +9,5 @@
 **汇编。** 独立 YAML 使用 version、title 和有序 chapters，每项以 document 指定稳定 ID，可加 block 选择范围。顶层 revision 缺省时读取当前工作区，填写时所有源文档、路径和附件取自该快照。生成一个 Markdown 文件、资源目录及 JSON 来源映射。映射记录输出行区间、文档与块 ID、源对象哈希和已用版本。输出锚点按章节唯一化，改写交叉引用，按哈希复制附件。缺失引用先报告；构建成功后才发布整个输出目录。
 
 Manifest v2 的兼容读取、恢复边界与持久化顺序见 [Windows 工作区身份和派生索引](adr/0002-windows-index.md)。
+
+[Manifest v3 的协调、迁移和恢复](adr/0004-file-reconciliation.md) · [迁移后样例](examples/manifest-v3.json)
