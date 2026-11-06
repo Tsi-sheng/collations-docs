@@ -57,3 +57,9 @@ Codex 云端承担代码与通用验证，desktop 的 Windows CI 承担原生构
 ## 关联文档和后续工作
 
 以 [路线图](docs/ROADMAP.md) 和上述 ADR 组织里程碑。下一步补齐 v0.3 实现对应的验收记录、云端环境准备与可复现发布说明；不通过改名、删仓或重写历史来代替职责澄清。
+
+## 云端接续开发
+
+- [总交接：基线、PR 依赖、验证与待办](HANDOFF.md)
+- [Windows v0.3 最终需求与视觉参考](docs/specs/windows-v0.3.md)
+

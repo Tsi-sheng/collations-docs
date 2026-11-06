@@ -1,0 +1,142 @@
+# Collations 云端开发交接
+
+核实日期：2026-11-06。以下为交接快照，接手时重新读取远程 HEAD、PR、依赖与 CI，不直接以 main 或版本号判断完成度。本次交接前 19 个 PR 均 Open、未合并。
+
+## 起点与职责
+
+日常环境优先纳入 core、desktop、docs。web、mobile、api 是不同职责的规划仓库，暂无需改名、删除或归档。各仓最新 README 位于 `docs/repository-guide-20261106`；本交接基于 docs README PR #6。
+
+| 仓库 | 职责与实际能力 | 实现基线 |
+|---|---|---|
+| core | 解析、身份、Manifest、协调；已有 v0.3 链接基础 | 4866927187e5bcaca4c76238ac12e41a37a922f9 |
+| desktop | Tauri、文件、监听、SQLite、v0.2 编辑器 | 7aa42af1a34991f4d47bb03cc1f1194bd254545d |
+| docs | 协议、ADR、路线图，v0.3 设计 | ab913b063437d9ba31ba19f9029167ecbd16626d |
+| web | 浏览器客户端预留 | main 仅 README |
+| mobile | 移动/平板及 HarmonyOS 路线 | main 仅 README |
+| api | 同步、分享与远程服务预留 | main 仅 README |
+
+desktop 的 `feat/knowledge-workspace-v0.3` 与上述 v0.2 提交相同，未完成 UI 重构。其 package.json 固定 core `026644d0d398b722020ede2186973d4b9cf8d30e`，尚未接入 `4866927`。联调后固定已上传的 core SHA 并更新锁文件，再验证干净安装；不得依赖个人相对目录。
+
+## PR 依赖与审查
+
+core：#1 → #2 → #3 → #4 → #5 → #6（README）。
+docs：#1 → #2 → #3 → #4 → #6（README）；Capture #5 从协议迁移分支独立分出。
+desktop：#1 → #2 → #3；README #4 以同一 v0.2 提交所在 v0.3 分支为基线，当前不存在额外 UI 功能 PR。
+web/mobile/api：各 #1 是 README PR。箭头表示依赖，不构成自动合并授权。
+
+
+### collations-core
+
+| PR | HEAD 分支 | HEAD SHA | 目标分支 |
+|---|---|---|---|
+| [#1 ](https://github.com/Tsi-sheng/collations-core/pull/1) | `migration/v0.1-protocol` | `2ac06c13549469b57696ec99e33056ad051ff9f9` | `main` |
+| [#2 ](https://github.com/Tsi-sheng/collations-core/pull/2) | `feat/workspace-index-v0.1` | `bc8c5dcda2acae32c653cf8a5218567fd1be2d11` | `migration/v0.1-protocol` |
+| [#3 ](https://github.com/Tsi-sheng/collations-core/pull/3) | `feat/reconciliation-v0.1.1` | `8ec30458eaaa627a8c237409e1f69deadeb3ba50` | `feat/workspace-index-v0.1` |
+| [#4 ](https://github.com/Tsi-sheng/collations-core/pull/4) | `feat/editor-v0.2` | `026644d0d398b722020ede2186973d4b9cf8d30e` | `feat/reconciliation-v0.1.1` |
+| [#5 (Draft)](https://github.com/Tsi-sheng/collations-core/pull/5) | `feat/knowledge-workspace-v0.3` | `4866927187e5bcaca4c76238ac12e41a37a922f9` | `feat/editor-v0.2` |
+| [#6 ](https://github.com/Tsi-sheng/collations-core/pull/6) | `docs/repository-guide-20261106` | `685d0ae11f296b80a1a85247ea682d7871959067` | `feat/knowledge-workspace-v0.3` |
+
+### collations-desktop
+
+| PR | HEAD 分支 | HEAD SHA | 目标分支 |
+|---|---|---|---|
+| [#1 ](https://github.com/Tsi-sheng/collations-desktop/pull/1) | `feat/windows-v0.1-index` | `f36d9d0c3734e69b41f7f167bea2044ec28265a4` | `main` |
+| [#2 ](https://github.com/Tsi-sheng/collations-desktop/pull/2) | `feat/reconciliation-v0.1.1` | `e279fe295200f6376c97a40aee7fd11d296d4592` | `feat/windows-v0.1-index` |
+| [#3 ](https://github.com/Tsi-sheng/collations-desktop/pull/3) | `feat/editor-v0.2` | `7aa42af1a34991f4d47bb03cc1f1194bd254545d` | `feat/reconciliation-v0.1.1` |
+| [#4 ](https://github.com/Tsi-sheng/collations-desktop/pull/4) | `docs/repository-guide-20261106` | `f140576d1a5acd9c2c0fd29308173854b7ef20b7` | `feat/knowledge-workspace-v0.3` |
+
+### collations-docs
+
+| PR | HEAD 分支 | HEAD SHA | 目标分支 |
+|---|---|---|---|
+| [#1 ](https://github.com/Tsi-sheng/collations-docs/pull/1) | `migration/v0.1-protocol` | `1a2e790e236471d14f9d8573e59d2ff32978a2e6` | `main` |
+| [#2 ](https://github.com/Tsi-sheng/collations-docs/pull/2) | `feat/reconciliation-v0.1.1` | `09d884c20acdf7ac4ebd3f7fd37a7fad7cd6ef79` | `migration/v0.1-protocol` |
+| [#3 ](https://github.com/Tsi-sheng/collations-docs/pull/3) | `feat/editor-v0.2` | `55ed45bd03a170d3a2025fe5d2322d3968c95ca6` | `feat/reconciliation-v0.1.1` |
+| [#4 (Draft)](https://github.com/Tsi-sheng/collations-docs/pull/4) | `feat/knowledge-workspace-v0.3` | `ab913b063437d9ba31ba19f9029167ecbd16626d` | `feat/editor-v0.2` |
+| [#5 (Draft)](https://github.com/Tsi-sheng/collations-docs/pull/5) | `docs/capture-fidelity` | `cf0ce7af326ee72f2db1fffefb7b6e325f91004f` | `migration/v0.1-protocol` |
+| [#6 ](https://github.com/Tsi-sheng/collations-docs/pull/6) | `docs/repository-guide-20261106` | `54d2699645ab964dc7305f4cf302ff92b69e001e` | `feat/knowledge-workspace-v0.3` |
+
+### collations-web
+
+| PR | HEAD 分支 | HEAD SHA | 目标分支 |
+|---|---|---|---|
+| [#1 ](https://github.com/Tsi-sheng/collations-web/pull/1) | `docs/repository-guide-20261106` | `e51934cf55f86109fd8acd0bce395fd789f7c0ab` | `main` |
+
+### collations-mobile
+
+| PR | HEAD 分支 | HEAD SHA | 目标分支 |
+|---|---|---|---|
+| [#1 ](https://github.com/Tsi-sheng/collations-mobile/pull/1) | `docs/repository-guide-20261106` | `261e97dfac5ac5187acbf3254dcabc8f2c52ac4e` | `main` |
+
+### collations-api
+
+| PR | HEAD 分支 | HEAD SHA | 目标分支 |
+|---|---|---|---|
+| [#1 ](https://github.com/Tsi-sheng/collations-api/pull/1) | `docs/repository-guide-20261106` | `0867cb021c5708b7c4b69de839100769d6c19190` | `main` |
+
+## 接续步骤与不可破坏的行为
+
+1. 读取上述实际分支及 [完整 v0.3 规范](docs/specs/windows-v0.3.md)，核对 README 和 ADR；不要重新迁移或初始化。
+2. 准备云端环境，验证授权、锁文件安装和既有测试。当前仅有工作方式说明，本交接没有确认任何已发布 Codex 云端环境。
+3. 分离活动文档、命令与布局，保持每标签编辑器挂载，推进五区 UI、主题、命令面板、冲突和恢复交互。
+4. 审查 core 链接边界用例，接入 desktop 派生关系表、入链/出链、定位及经过确认的修复。
+5. 在 Windows 执行回归、截图、缩放、性能和 IME 验收，提交待审 PR。
+
+保留原始 Markdown 字节、BOM、换行、未知元数据；Manifest v3 保存身份与决策，SQLite 仅派生索引。外部冲突不静默覆盖。扫描、编辑、出版离线可用。不得直接修改 main、自动合并、强推或提交凭据。
+
+## 验证命令与历史证据
+
+命令在对应仓库根目录执行，建议 Node 22.20（既有验证版本），使用 npm/Cargo 锁文件。Windows 原生构建需 Rust MSVC、C++ Build Tools、WebView2。
+
+Core：
+
+```sh
+npm ci
+npm run check
+npm test
+node --test tests/protocol.test.mjs
+```
+
+Desktop：
+
+```sh
+npm ci
+npm run build
+node --experimental-strip-types --test tests/source.test.mjs
+npm run tauri -- build --no-bundle
+cargo test --locked --release --manifest-path src-tauri/Cargo.toml
+node tests/windows-smoke.mjs
+node tests/reconciliation-smoke.mjs
+node tests/editor-smoke.mjs
+```
+
+后三项在有交互式 Windows 桌面且已有 Release exe 时顺序运行，共用回环调试端口，不并行。CI 目前仅 PR 触发，执行原生构建和 Rust 测试、上传 exe；不代表自动完成交互回归或安装包发布。产物路径：`src-tauri/target/release/collations-desktop.exe`。
+
+| 记录 | 对应提交与证据 | 结果和边界 |
+|---|---|---|
+| core 类型检查/测试 | [4866927 PR #5](https://github.com/Tsi-sheng/collations-core/pull/5)，2026-11-06 | 12/12；协议样例单独复跑 2/2 |
+| desktop 前端/源码格式 | 7aa42af，2026-11-06 | 前端构建通过、源码测试 3/3；有分包体积警告 |
+| Windows 原生构建 | [运行 41442391326](https://github.com/Tsi-sheng/collations-desktop/actions/runs/41442391326)，7aa42af | 历史成功；当前 artifact 未过期 |
+| 三项打包程序回归 | [PR #3 验收记录](https://github.com/Tsi-sheng/collations-desktop/pull/3#issuecomment-6595907480)，7aa42af | 历史通过，含终止进程恢复；不等于真人 IME 验收 |
+
+可执行文件 SHA-256（本机复核）：
+`10560a40bd89025fe503406cf082f04d7038334ea1382ac5da17ffee482bb6ac`。
+
+Actions artifact `Collations-Windows-x64`（ID 13141239702）下载归档摘要：
+`5b5cd65cd803db0c36dd98242353defedab5b1ceef767c7f4ced68bb23ee1de6`。
+这是 GitHub 返回的归档摘要，不能与 exe 摘要混用。API 当前返回到期时间 `2027-01-31T12:09:27Z`，不是永久发布存档；到期后应从固定提交重建。本轮未重新执行产品构建或 GUI 测试，历史成绩不是后续提交的保证。
+
+## 尚未验证与环境待办
+
+- 真人中文 IME、v0.3 宽中窄窗口与 100/125/150% 缩放、浅深色视觉。
+- 同机同样例 v0.2/v0.3 性能对比及完整导航集成。
+- Codex 云端环境创建、发布、干净检出验证；需测试 npm 和私有 GitHub tarball 访问，网络可达不等于已授权。
+- 工具链固定、手动 CI、安装包和正式 Release 流程属于后续工作。本交接不安装工具链、不创建环境、不改造工作流。
+- 测试报告须区分真实文件行为、故障注入、自动化文本输入与真人操作。失败应记录步骤及日志，不将缺少环境写成通过。
+
+## 本地历史目录与后续规划
+
+旧工作区根目录 docs/examples/tests 为协议起始材料；migration 下各仓是保留历史的开发检出，docs-v011 是独立 docs 工作树；baseline 及其哈希清单是迁移备份，windows-v0.1 是旧可执行文件。它们不代表额外远程仓库，也不是新的云端任务前置条件。无需复制 Git 元数据、缓存、凭据或重复执行迁移，禁止未经确认清理这些目录。
+
+[Capture PR #5](https://github.com/Tsi-sheng/collations-docs/pull/5) 保存来源、公式保真及未来回归规范，尚非 Capture 实现；独立评审，不纳入 v0.3。原始粘贴附件仅用于上下文核对，最终要求以 [v0.3 规范](docs/specs/windows-v0.3.md) 为准。
+
