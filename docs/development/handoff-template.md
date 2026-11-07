@@ -4,7 +4,10 @@
 
 ```yaml
 task_id: COL-XXX
-owner_chat: 对话名字
+owner_chat: main/ui/regression/review
+rules_version: COL-AGENTS-2026-11-07.1
+actual_workdir: 实际执行目录
+app_binding: 已对应/待调整
 repository: Tsi-sheng/collations-desktop
 base_commit: 完整 SHA
 head_commit: 完整 SHA（未提交则明确注明）

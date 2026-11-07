@@ -16,14 +16,14 @@ web、mobile、api 仍按既定职责保留，不参与本轮日常构建。不�
 
 ## 对话与模型
 
-保留一个主控对话，新增两个执行对话，审查对话按需建立。保留会话不等于持续运行；同一时间最多两个写入者，每个任务必须指定文件范围。同一 Figma 文件只由 UI 对话写入。
+四个对话已建立：main、ui、regression、review；执行者按任务启动，审查按需运行。保留会话不等于持续运行；同一时间最多两个写入者，每个任务必须指定文件范围。同一 Figma 文件只由 UI 对话写入。
 
 | 对话名字 | 推荐模型与推理 | 工作方式 |
 |---|---|---|
-| Collations｜主控与集成 | GPT-6.1 Sol / Medium，复杂接口或风险评估临时 High | 核对基线、任务分配、文档、串行集成；执行者活跃时不改其文件 |
-| Collations｜UI 设计与交互 | GPT-6.1 Terra / Medium | Figma、截图及获准后的呈现层实现；复杂编辑会话问题交主控判断 |
-| Collations｜Windows 回归与可靠性 | GPT-6.1 Sol / Medium | 隔离样例与回归、保存和恢复验证；清晰机械的测试整理可临时用 Luna |
-| Collations｜独立审查（按需） | GPT-6.1 Sol / High；难题再用 GPT-6 Astra | 只读审查明确提交范围，报告缺陷，不与实现者同时修复 |
+| main | GPT-6.1 Sol / Medium，复杂接口或风险评估临时 High | 核对基线、任务分配、文档、串行集成；执行者活跃时不改其文件 |
+| ui | GPT-6.1 Terra / Medium | Figma、截图及获准后的呈现层实现；复杂编辑会话问题交主控判断 |
+| regression | GPT-6.1 Sol / Medium | 隔离样例与回归、保存和恢复验证；清晰机械的测试整理可临时用 Luna |
+| review（按需） | GPT-6.1 Sol / High；难题再用 GPT-6 Astra | 只读审查明确提交范围，报告缺陷，不与实现者同时修复 |
 
 模型是人工选择建议，不是仓库可强制的设置。账号实际模型列表与额度以客户端为准。暂不安装或配置 DeepSeek，不承诺其与当前 Codex 插件、认证及工具协议兼容；额外 API 预算为零时不主动引入付费调用。
 
@@ -62,3 +62,7 @@ web、mobile、api 仍按既定职责保留，不参与本轮日常构建。不�
 ## 本轮验证
 
 在搬迁后的原 core 目录执行 `npm run check` 和 `npm test`，类型检查通过，12/12 测试通过（Node 提示 SQLite 为实验特性）。外层快照根目录执行 `node --test tests/protocol.test.mjs`，2/2 通过；这是迁移样例校验，不替代 desktop 打包测试。新增入口及文档相对链接全部解析，`git diff --check` 通过。原 desktop 的 src、src-tauri/src、tests 共 20 个文件与本轮操作前 SHA-256 一致。
+
+## 现行协作规则
+
+本页此前的初始化记录属于历史状态。现在使用 [公共 AGENTS](AGENTS.md) 和 [四角色规则](agent-roles.md)，版本 COL-AGENTS-2026-11-07.1。四个已有对话由 main 统一协调，互发已授权任务、澄清与交接；不建立无人值守调度。当前状态以任务板和当次交接为准。

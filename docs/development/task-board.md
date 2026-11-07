@@ -4,10 +4,10 @@
 
 | ID | 负责人 | 起点与允许范围 | 验收与当前状态 |
 |---|---|---|---|
-| COL-UI-01 | UI 设计与交互 | docs #9；Figma 原文件；交互说明及设计资产 | 轻量写作、面板切换、返回原位置、用户主动设置记忆；画布读取 INVALID_ARGUMENT，设计与截图阻塞 |
-| COL-WIN-01 | Windows 回归与可靠性 | desktop `678e47e`；tests/**、单独验收记录 | 先验既有最终产物；顺序运行 windows/reconciliation/editor/navigation smoke；未执行新一轮 |
-| COL-UI-02 | UI 设计与交互 | COL-UI-01 设计验收后，重新核对 desktop HEAD；src/** 呈现层 | 按设计落地；保留 CM6 实例、撤销/选区/滚动、原始字节、安全保存和 Manifest v3；尚未开始 |
-| COL-REVIEW-01 | 独立审查（按需） | 主控给定 base..head；只读 | 核对 UI 与回归交接、缺陷及遗漏；尚未开始 |
+| COL-UI-01 | ui | docs #9；Figma 原文件；交互说明及设计资产 | 轻量写作、面板切换、返回原位置、用户主动设置记忆；画布读取 INVALID_ARGUMENT，设计与截图阻塞 |
+| COL-WIN-01 | regression | desktop `678e47e`；tests/**、单独验收记录 | 本机已执行：windows/editor/navigation 通过；reconciliation 两次持久化拒绝访问，未通过；证据待 main 核对归档 |
+| COL-UI-02 | ui | COL-UI-01 设计验收后，重新核对 desktop HEAD；src/** 呈现层 | 按设计落地；保留 CM6 实例、撤销/选区/滚动、原始字节、安全保存和 Manifest v3；尚未开始 |
+| COL-REVIEW-01 | review | 主控给定 base..head；只读 | 核对 UI 与回归交接、缺陷及遗漏；尚未开始 |
 
 ## 已确认的产品方向
 
@@ -20,3 +20,9 @@
 UI 与回归可以独立准备。回归窗口不得修改 src/** 或 src-tauri/**；发现产品缺陷后上报主控再重新分配。UI 视觉实现等待 Figma 设计与截图；回归可先推进。原生保存、Manifest、接口、依赖/锁文件变更必须由主控单独明确授权，不能在两个窗口中并发修改。
 
 四项打包测试共用 19341 端口，始终串行。测试不得使用私人笔记；没有真人参与时，中文 IME 手工验收保持未验证。
+
+## 四对话加载与后续
+
+- COL-FLOW-01：main 维护公共/角色规则，ui 仅在 docs/development/handoffs/COL-FLOW-01-ui.md 写一份规则加载交接，review 只读审查本轮文档，regression 在既有回归安全结束后确认加载；不再运行 smoke。
+- COL-WIN-02：协调持久化 os error 5 的后续诊断，待 main 单独分配，不属于本轮规则配置；不得自行修改原生实现。
+- 当前公共规则版本 COL-AGENTS-2026-11-07.1。main 保持单一任务板写入者；不得因规则初始化重复启动 COL-WIN-01。
