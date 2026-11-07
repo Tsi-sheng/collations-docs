@@ -25,7 +25,7 @@ UI 与回归可以独立准备。回归窗口不得修改 src/** 或 src-tauri/*
 
 - COL-FLOW-01：main 维护公共/角色规则，ui 仅在 docs/development/handoffs/COL-FLOW-01-ui.md 写一份规则加载交接，review 只读审查本轮文档，regression 在既有回归安全结束后确认加载；不再运行 smoke。
 - COL-WIN-02：协调持久化 os error 5 的后续诊断，待 main 单独分配，不属于本轮规则配置；不得自行修改原生实现。
-- 当前公共规则版本 COL-AGENTS-2026-11-07.1。main 保持单一任务板写入者；不得因规则初始化重复启动 COL-WIN-01。
+- 当前公共规则版本 COL-AGENTS-2026-11-07.2。main 保持单一任务板写入者；不得因规则初始化重复启动 COL-WIN-01。
 
 ## COL-FLOW-01 完成记录
 
@@ -33,4 +33,6 @@ UI 与回归可以独立准备。回归窗口不得修改 src/** 或 src-tauri/*
 
 ## COL-CMD-01：命令失败规范
 
-当前公共规则 COL-AGENTS-2026-11-07.2，固定提交 ecbcb3a。新增 [排障说明](command-troubleshooting.md)，失败记录进入交接模板。只更新文档和读取入口；原生退出码 7、依赖步骤跳过及独立检查继续已做无写入验证。角色重载与 review 结论待记录，不重新启动 smoke，不修 os error 5 或 Figma。历史交接中的 .1 保留其当时版本。
+当前公共规则 COL-AGENTS-2026-11-07.2，固定提交 46ea6cf。新增 [排障说明](command-troubleshooting.md)，失败记录进入交接模板。只更新文档和读取入口；原生退出码 7、依赖步骤跳过及独立检查继续已做无写入验证。四角色重载已确认，review 指出的退出码 P2 已修正并复核关闭，不重新启动 smoke，不修 os error 5 或 Figma。历史交接中的 .1 保留其当时版本。
+
+COL-CMD-01 完成证据见 [当次记录](handoffs/COL-CMD-01-main.md)。最终固定 SHA 为 46ea6cf；未知故障仍待单独分配。
