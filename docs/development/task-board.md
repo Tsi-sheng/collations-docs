@@ -30,3 +30,7 @@ UI 与回归可以独立准备。回归窗口不得修改 src/** 或 src-tauri/*
 ## COL-FLOW-01 完成记录
 
 四对话已确认加载 COL-AGENTS-2026-11-07.1；ui 小型文档派发、交接和 main 复核已完成，review 在指定提交范围只读审查未发现可复现缺陷。详见 [当次交接](handoffs/COL-FLOW-01-main.md)。应用 cwd 绑定待调整，执行命令使用显式绝对目录。下一项 COL-WIN-02 仍待分配；未重复启动回归或 Figma 请求。
+
+## COL-CMD-01：命令失败规范
+
+当前公共规则 COL-AGENTS-2026-11-07.2，固定提交 ecbcb3a。新增 [排障说明](command-troubleshooting.md)，失败记录进入交接模板。只更新文档和读取入口；原生退出码 7、依赖步骤跳过及独立检查继续已做无写入验证。角色重载与 review 结论待记录，不重新启动 smoke，不修 os error 5 或 Figma。历史交接中的 .1 保留其当时版本。
