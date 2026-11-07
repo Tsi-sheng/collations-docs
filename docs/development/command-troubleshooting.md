@@ -33,11 +33,13 @@
 npm.cmd run build
 $buildExit = $LASTEXITCODE
 if ($buildExit -ne 0) {
-    Write-Error "构建失败，退出码 $buildExit；不执行依赖该产物的步骤"
+    [Console]::Error.WriteLine("构建失败，退出码 $buildExit；不执行依赖该产物的步骤")
     exit $buildExit
 }
 # 只有构建成功才进入依赖步骤。
 ```
+
+示例使用标准错误输出而非 `Write-Error`，避免 `$ErrorActionPreference='Stop'` 使脚本先抛错并丢失原始退出码。
 
 若输出经过 `Tee-Object`，管道结束后立即保存原生命令的 `$LASTEXITCODE`；同时使用终止错误处理日志写入失败。PowerShell cmdlet 错误用 `-ErrorAction Stop` 或 `$ErrorActionPreference='Stop'` 和 try/catch 检查，不能把上次的 `$LASTEXITCODE` 当作 cmdlet 结果。
 
