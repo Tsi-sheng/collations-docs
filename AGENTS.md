@@ -1,15 +1,7 @@
-# 工程约定
+# Collations Docs 入口
 
-实现前阅读 README 所列协议。协议涉及持久数据的变动须附 ADR、格式版本、迁移样例和恢复测试。保留用户原始 Markdown 字节，包括 BOM、换行和未知元数据。首次扫描仅登记身份。编辑、索引和出版须能离线运行。
+规则版本：COL-AGENTS-2026-11-07.1。这是重建后的现行入口。
 
-核心包只依赖存储接口。文件系统、监听和 SQLite 通过平台适配器接入。每个里程碑按路线图演示用户流程，并记录测试命令和结果。发布前在 Windows 安装环境回归。
+先读取 [固定版本公共规则](https://github.com/Tsi-sheng/collations-docs/blob/8d45db4cdc17046acf8e10828dcf778064530e94/docs/development/AGENTS.md)与[四对话角色](https://github.com/Tsi-sheng/collations-docs/blob/8d45db4cdc17046acf8e10828dcf778064530e94/docs/development/agent-roles.md)；本地对应文件为 [公共规则](docs/development/AGENTS.md)和[角色规则](docs/development/agent-roles.md)。核对版本一致再执行。[任务板](docs/development/task-board.md)由 main 维护。
 
-文档通过 PROJECT.md 导航。协议变更需核对引用的 core 提交和对应的测试结果。
-
-## 多对话协作
-
-接续开发先读 [协作分工](docs/development/codex-collaboration.md)和[任务板](docs/development/task-board.md)。每个执行任务在真实仓库的独立工作树内进行，记录准确基线、文件范围及交接；不将外层快照仓库当作最新产品仓库。主控串行集成，执行窗口不得同时修改共享接口或他人文件。
-
-## UI 设计与交付
-
-UI 设计、交互调整及前端视觉实现任务开始前，必须读取 [UI 设计与截图交付约定](docs/ui/AGENTS.md)。该规则同样适用于本仓其他目录内的 UI 文档任务。先在 Figma 完成设计，每次 UI 任务交付本次画板截图及节点链接，截图失败据实标为未完成。
+实现状态以当次 SHA 与证据为准。文档协议导航见 README 和 PROJECT.md。不直接改远程 main、不合并 PR、不强推，保留用户改动。UI 工作另读 [UI 约定](docs/ui/AGENTS.md)，保持先 Figma、实际新截图及失败据实报告。
