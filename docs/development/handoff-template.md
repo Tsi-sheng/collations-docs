@@ -5,7 +5,7 @@
 ```yaml
 task_id: COL-XXX
 owner_chat: main/ui/regression/review
-rules_version: COL-AGENTS-2026-11-07.1
+rules_version: COL-AGENTS-2026-11-07.2
 actual_workdir: 实际执行目录
 app_binding: 已对应/待调整
 repository: Tsi-sheng/collations-desktop
@@ -19,6 +19,16 @@ tests:
   - command: 实际命令
     environment: 操作系统和工具链
     result: 通过/失败/未执行，数量与日志位置
+failures:
+  - command: 失败命令（凭据和签名地址脱敏）
+    actual_workdir: 实际执行目录
+    exit_code: 原生命令退出码；工具失败则标明无退出码
+    error: 脱敏错误原文
+    evidence_checked: 已检查的路径、工具、权限或占用证据
+    retries_and_changes: 次数、各次条件变化；未重试则注明
+    impact: 被阻塞的依赖步骤与可继续部分
+    root_cause: 尚未确定，或有证据的结论
+    next_action: 范围内下一步或回 main 分配
 known_issues: []
 not_verified: []
 next_action: 下一步或需要主控决定的内容
