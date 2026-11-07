@@ -36,3 +36,9 @@ UI 与回归可以独立准备。回归窗口不得修改 src/** 或 src-tauri/*
 当前公共规则 COL-AGENTS-2026-11-07.2，固定提交 46ea6cf。新增 [排障说明](command-troubleshooting.md)，失败记录进入交接模板。只更新文档和读取入口；原生退出码 7、依赖步骤跳过及独立检查继续已做无写入验证。四角色重载已确认，review 指出的退出码 P2 已修正并复核关闭，不重新启动 smoke，不修 os error 5 或 Figma。历史交接中的 .1 保留其当时版本。
 
 COL-CMD-01 完成证据见 [当次记录](handoffs/COL-CMD-01-main.md)。最终固定 SHA 为 46ea6cf；未知故障仍待单独分配。
+
+## COL-UI-DESIGN-02：完整工作区设计续作
+
+main协调，ui为唯一画布写入者，review只读审查交互及数据边界。新增 [交互规范](../ui/workspace-customization.md)及[状态清单](../ui/workspace-customization-states.md)，目标为三批画板、两条原型。当前仅文档草案；Figma访问及本次截图未验收。不修改desktop PR #5，不运行smoke，不开始独立窗口实现。原有COL-UI-01轻量布局需求由该规范继续覆盖。
+
+COL-UI-DESIGN-02规范修订已获review定向复核：1P2+2P3关闭，24逻辑状态/2原型路径保留。用户确认权限或连接已调整后，ui的create_session遇连接传输失败，根读取未执行；Figma画板和截图仍未完成。详细证据见 [交付记录](../ui/2026-11-07-workspace-customization-delivery.md)。
