@@ -26,3 +26,7 @@ UI 与回归可以独立准备。回归窗口不得修改 src/** 或 src-tauri/*
 - COL-FLOW-01：main 维护公共/角色规则，ui 仅在 docs/development/handoffs/COL-FLOW-01-ui.md 写一份规则加载交接，review 只读审查本轮文档，regression 在既有回归安全结束后确认加载；不再运行 smoke。
 - COL-WIN-02：协调持久化 os error 5 的后续诊断，待 main 单独分配，不属于本轮规则配置；不得自行修改原生实现。
 - 当前公共规则版本 COL-AGENTS-2026-11-07.1。main 保持单一任务板写入者；不得因规则初始化重复启动 COL-WIN-01。
+
+## COL-FLOW-01 完成记录
+
+四对话已确认加载 COL-AGENTS-2026-11-07.1；ui 小型文档派发、交接和 main 复核已完成，review 在指定提交范围只读审查未发现可复现缺陷。详见 [当次交接](handoffs/COL-FLOW-01-main.md)。应用 cwd 绑定待调整，执行命令使用显式绝对目录。下一项 COL-WIN-02 仍待分配；未重复启动回归或 Figma 请求。
