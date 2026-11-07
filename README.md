@@ -60,6 +60,7 @@ Codex 云端承担代码与通用验证，desktop 的 Windows CI 承担原生构
 
 ## 云端接续开发
 
+- [多对话协作、模型建议与启动说明](docs/development/codex-collaboration.md)及[当前任务板](docs/development/task-board.md)（2026-11-07 更新，优先于旧交接快照核对本轮基线）
 - [总交接：基线、PR 依赖、验证与待办](HANDOFF.md)
 - [Windows v0.3 最终需求与视觉参考](docs/specs/windows-v0.3.md)
 
