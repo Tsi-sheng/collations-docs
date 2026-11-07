@@ -64,3 +64,7 @@ Codex 云端承担代码与通用验证，desktop 的 Windows CI 承担原生构
 - [总交接：基线、PR 依赖、验证与待办](HANDOFF.md)
 - [Windows v0.3 最终需求与视觉参考](docs/specs/windows-v0.3.md)
 
+
+## 工作区 UI 设计续作
+
+[轻量写作与完整定制规范](docs/ui/workspace-customization.md) · [画板、状态与原型清单](docs/ui/workspace-customization-states.md)。这是独立设计扩展，画板与新截图仍待 Figma 访问恢复，不表示多窗口或完整定制已经实现。
