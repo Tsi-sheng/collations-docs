@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "app": {
+    "theme": "light",
+    "fontFamily": "system-ui",
+    "fontSize": 16,
+    "lineHeight": 1.6,
+    "readingWidth": 800,
+    "lineWrapping": true,
+    "reducedMotion": false,
+    "defaultMode": "split",
+    "temporaryTabs": true,
+    "toolbar": [],
+    "keybindings": {}
+  },
+  "workspaces": {
+    "C:/Example/数学笔记": {
+      "layout": {
+        "mode": "split",
+        "sidebarVisible": true,
+        "sidebarWidth": 240,
+        "inspectorVisible": false,
+        "inspectorWidth": 280,
+        "inspectorTab": "outline",
+        "splitRatio": 0.5
+      },
+      "presets": []
+    }
+  }
+}
