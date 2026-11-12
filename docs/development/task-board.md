@@ -45,4 +45,4 @@ COL-UI-DESIGN-02规范修订已获review定向复核：1P2+2P3关闭，24逻辑�
 
 ## COL-UI-IMPLEMENT-01：单窗口前端接入
 
-用户批准本批按已审查规范先实现，以真实程序截图验收，Figma新图保持未完成；例外仅本批。范围见 [实施约定](../specs/single-window-ui-integration.md)。ui在干净678e47e基础独占src和获准tests，main写文档，regression只读准备待固定提交，review后续只读审查。core本轮类型检查与12测试已通过；不改native持久化，不开始COL-WIN-02。桌面 PR #7 的产品构建 4efdb53 已完成四种视口实机截图；85237f5 修订测试采样后，同一 exe 的七项 smoke 均有通过记录。见 [Windows 验收与定向复验](../ui/2026-11-08-4efdb53-acceptance.md)。Figma、真人 IME、实际系统缩放、性能与安装验收仍待执行。
+用户批准本批按已审查规范先实现，以真实程序截图验收，Figma新图保持未完成；例外仅本批。范围见 [实施约定](../specs/single-window-ui-integration.md)。ui在干净678e47e基础独占src和获准tests，main写文档，regression只读准备待固定提交，review后续只读审查。core本轮类型检查与12测试已通过；不改native持久化，不开始COL-WIN-02。桌面 PR #7 的最终构建 85237f5 在真实 Windows 上七项 smoke 全部通过，已保存四种视口实机截图。见 [Windows 验收与定向复验](../ui/2026-11-12-85237f5-acceptance.md)。Figma、真人 IME、实际系统缩放、性能与安装验收仍待执行。
