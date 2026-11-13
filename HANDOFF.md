@@ -47,3 +47,7 @@ core 根目录：npm ci、npm run check、npm test；协议样例：node --test 
 ## 历史目录保护
 
 旧桌面已归档可达Git refs、补丁及33源文件，独立恢复、SHA-256核对通过；未删除目录或缓存。旧主仓库元数据仍供UI/regression关联工作树使用，不得整目录删除。归档不含忽略缓存、凭据或不可达对象，不是整机备份。本机定位留在协调记录，云端接续不依赖这些路径，不复制Git元数据或重复迁移。
+
+## 下一任务协议入口
+
+[HistoryStore ADR（待审）](docs/adr/0008-history-store.md) · [v0.4协议与接口审查方案](docs/specs/history-v0.4.md)。先审查A的存储与B的恢复边界，再启动A1实现。

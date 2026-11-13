@@ -4,9 +4,9 @@
 
 | ID | 负责人/范围 | 状态/下一关口 |
 |---|---|---|
-| COL-CLOSE-03 | main文档，review只读；docs75255b2 | 本批收尾，待文档PR审查 |
+| COL-CLOSE-03 | main文档，review只读；docs75255b2 | 交接收尾提交8b4b3ae，待文档PR审查 |
 | COL-TABS-01 | ui/regression/review；85237f5→94a23f2 | 实现及限定回归完成，桌面PR#8待审未合并 |
-| COL-HIST-DESIGN-01 | main/review；core4866927、desktop94a23f2；仅文档 | 本批协议接口审查，不写产品 |
+| COL-HIST-DESIGN-01 | main/review；core4866927、desktop94a23f2；仅文档 | [协议接口方案](../specs/history-v0.4.md)及[ADR0008](../adr/0008-history-store.md)待审，不写产品 |
 | COL-HIST-A | main；协议审查后独立core分支 | 未开始：对象、显式提交、完整性与比较 |
 | COL-HIST-B | main原生、ui任务视图、regression | 未开始，依赖A：恢复前保全与事务恢复 |
 | COL-COMPOSE-C | main核心、ui呈现 | 未开始，依赖固定版本读取；两讲义复用及冻结重建 |

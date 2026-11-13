@@ -74,3 +74,7 @@ Codex 云端承担代码与通用验证，desktop 的 Windows CI 承担原生构
 ## 单窗口前端实施
 
 本批用户批准 [按规范先实施、以真实程序截图验收](docs/specs/single-window-ui-integration.md)；仅本批例外，Figma新图未完成。[UI偏好ADR](docs/adr/0007-ui-preferences.md)记录独立v1本机格式与损坏恢复，不改变Manifest。实现和测试见 [Windows 验收、截图与定向复验](docs/ui/2026-11-12-85237f5-acceptance.md)。
+
+## v0.4 下一阶段
+
+[版本历史ADR（待审）](docs/adr/0008-history-store.md) · [协议、接口及分阶段验收](docs/specs/history-v0.4.md)。本批完成文档审查准备，核心实现、安全恢复及讲义汇编尚未开始。
