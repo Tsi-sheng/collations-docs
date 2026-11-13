@@ -1,0 +1,271 @@
+{
+  "verifiedOn": "2026-11-13 Asia/Shanghai",
+  "repositories": {
+    "collations-core": [
+      {
+        "baseRefName": "feat/knowledge-workspace-v0.3",
+        "headRefName": "docs/repository-guide-20261106",
+        "headRefOid": "685d0ae11f296b80a1a85247ea682d7871959067",
+        "isDraft": false,
+        "number": 6,
+        "state": "OPEN",
+        "title": "docs: clarify repository responsibilities and cloud development",
+        "url": "https://github.com/Tsi-sheng/collations-core/pull/6"
+      },
+      {
+        "baseRefName": "feat/editor-v0.2",
+        "headRefName": "feat/knowledge-workspace-v0.3",
+        "headRefOid": "4866927187e5bcaca4c76238ac12e41a37a922f9",
+        "isDraft": true,
+        "number": 5,
+        "state": "OPEN",
+        "title": "Add saved Markdown and wiki link resolution",
+        "url": "https://github.com/Tsi-sheng/collations-core/pull/5"
+      },
+      {
+        "baseRefName": "feat/reconciliation-v0.1.1",
+        "headRefName": "feat/editor-v0.2",
+        "headRefOid": "026644d0d398b722020ede2186973d4b9cf8d30e",
+        "isDraft": false,
+        "number": 4,
+        "state": "OPEN",
+        "title": "v0.2 Markdown preview and explicit document creation",
+        "url": "https://github.com/Tsi-sheng/collations-core/pull/4"
+      },
+      {
+        "baseRefName": "feat/workspace-index-v0.1",
+        "headRefName": "feat/reconciliation-v0.1.1",
+        "headRefOid": "8ec30458eaaa627a8c237409e1f69deadeb3ba50",
+        "isDraft": false,
+        "number": 3,
+        "state": "OPEN",
+        "title": "v0.1.1 persistent identity reconciliation",
+        "url": "https://github.com/Tsi-sheng/collations-core/pull/3"
+      },
+      {
+        "baseRefName": "migration/v0.1-protocol",
+        "headRefName": "feat/workspace-index-v0.1",
+        "headRefOid": "bc8c5dcda2acae32c653cf8a5218567fd1be2d11",
+        "isDraft": false,
+        "number": 2,
+        "state": "OPEN",
+        "title": "Windows v0.1 workspace identity and index records",
+        "url": "https://github.com/Tsi-sheng/collations-core/pull/2"
+      },
+      {
+        "baseRefName": "main",
+        "headRefName": "migration/v0.1-protocol",
+        "headRefOid": "2ac06c13549469b57696ec99e33056ad051ff9f9",
+        "isDraft": false,
+        "number": 1,
+        "state": "OPEN",
+        "title": "迁入 Collations v0.1 协议与验证样例",
+        "url": "https://github.com/Tsi-sheng/collations-core/pull/1"
+      }
+    ],
+    "collations-desktop": [
+      {
+        "baseRefName": "feat/lean-writing-interactions",
+        "headRefName": "codex/restore-tab-shortcuts",
+        "headRefOid": "94a23f275fd80a142eadc85dceddf8bdbe32557f",
+        "isDraft": false,
+        "number": 8,
+        "state": "OPEN",
+        "title": "fix: restore configurable document tab shortcuts",
+        "url": "https://github.com/Tsi-sheng/collations-desktop/pull/8"
+      },
+      {
+        "baseRefName": "feat/windows-v0.3-workspace",
+        "headRefName": "feat/lean-writing-interactions",
+        "headRefOid": "85237f5be6250a3063a70114eab3b28787a1ca29",
+        "isDraft": true,
+        "number": 7,
+        "state": "OPEN",
+        "title": "feat: single-window writing workspace and preferences",
+        "url": "https://github.com/Tsi-sheng/collations-desktop/pull/7"
+      },
+      {
+        "baseRefName": "feat/windows-v0.3-workspace",
+        "headRefName": "docs/ui-design-contract",
+        "headRefOid": "2b33439898685e4d37fd27004dde8e94f67de162",
+        "isDraft": true,
+        "number": 6,
+        "state": "OPEN",
+        "title": "Route desktop work through pinned shared rules and four-chat roles",
+        "url": "https://github.com/Tsi-sheng/collations-desktop/pull/6"
+      },
+      {
+        "baseRefName": "feat/knowledge-workspace-v0.3",
+        "headRefName": "feat/windows-v0.3-workspace",
+        "headRefOid": "678e47e29b205893be67ed26b7dbd7a3ebea3038",
+        "isDraft": true,
+        "number": 5,
+        "state": "OPEN",
+        "title": "Build the v0.3 writing and knowledge workspace from Figma",
+        "url": "https://github.com/Tsi-sheng/collations-desktop/pull/5"
+      },
+      {
+        "baseRefName": "feat/knowledge-workspace-v0.3",
+        "headRefName": "docs/repository-guide-20261106",
+        "headRefOid": "f140576d1a5acd9c2c0fd29308173854b7ef20b7",
+        "isDraft": false,
+        "number": 4,
+        "state": "OPEN",
+        "title": "docs: clarify repository responsibilities and cloud development",
+        "url": "https://github.com/Tsi-sheng/collations-desktop/pull/4"
+      },
+      {
+        "baseRefName": "feat/reconciliation-v0.1.1",
+        "headRefName": "feat/editor-v0.2",
+        "headRefOid": "7aa42af1a34991f4d47bb03cc1f1194bd254545d",
+        "isDraft": false,
+        "number": 3,
+        "state": "OPEN",
+        "title": "Windows v0.2 Markdown and LaTeX editor",
+        "url": "https://github.com/Tsi-sheng/collations-desktop/pull/3"
+      },
+      {
+        "baseRefName": "feat/windows-v0.1-index",
+        "headRefName": "feat/reconciliation-v0.1.1",
+        "headRefOid": "e279fe295200f6376c97a40aee7fd11d296d4592",
+        "isDraft": false,
+        "number": 2,
+        "state": "OPEN",
+        "title": "Windows v0.1.1 file reconciliation and recovery",
+        "url": "https://github.com/Tsi-sheng/collations-desktop/pull/2"
+      },
+      {
+        "baseRefName": "main",
+        "headRefName": "feat/windows-v0.1-index",
+        "headRefOid": "f36d9d0c3734e69b41f7f167bea2044ec28265a4",
+        "isDraft": false,
+        "number": 1,
+        "state": "OPEN",
+        "title": "Windows v0.1 offline workspace index",
+        "url": "https://github.com/Tsi-sheng/collations-desktop/pull/1"
+      }
+    ],
+    "collations-docs": [
+      {
+        "baseRefName": "docs/workspace-customization-design",
+        "headRefName": "docs/single-window-ui-integration",
+        "headRefOid": "75255b2445b73bed915cc418d3fd75906e763e3f",
+        "isDraft": true,
+        "number": 12,
+        "state": "OPEN",
+        "title": "docs: single-window UI integration and preferences ADR",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/12"
+      },
+      {
+        "baseRefName": "docs/codex-collaboration",
+        "headRefName": "docs/workspace-customization-design",
+        "headRefOid": "4e1f870460c779f22862513ad477edac3717c10f",
+        "isDraft": true,
+        "number": 11,
+        "state": "OPEN",
+        "title": "Specify lightweight writing and advanced workspace customization",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/11"
+      },
+      {
+        "baseRefName": "docs/ui-design-contract",
+        "headRefName": "docs/codex-collaboration",
+        "headRefOid": "1fbe22ec79c2d857287d389a38d50dcbbd176279",
+        "isDraft": true,
+        "number": 10,
+        "state": "OPEN",
+        "title": "Establish main-led four-chat workflow and verified agent rule loading",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/10"
+      },
+      {
+        "baseRefName": "docs/windows-v0.3-index",
+        "headRefName": "docs/ui-design-contract",
+        "headRefOid": "ed7b4cf9bbd4d841c1f5e968f4045c71c9cb0bbe",
+        "isDraft": true,
+        "number": 9,
+        "state": "OPEN",
+        "title": "Require Figma-first UI design and screenshot delivery",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/9"
+      },
+      {
+        "baseRefName": "docs/cloud-handoff-v0.3",
+        "headRefName": "docs/windows-v0.3-index",
+        "headRefOid": "9ce78eb556068ce1219610526c9260e87e83d9f1",
+        "isDraft": true,
+        "number": 8,
+        "state": "OPEN",
+        "title": "Record the v0.3 derived link index and repair limits",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/8"
+      },
+      {
+        "baseRefName": "docs/repository-guide-20261106",
+        "headRefName": "docs/cloud-handoff-v0.3",
+        "headRefOid": "f737f385ab2edd4c9eb04e7f6e0509468090e82b",
+        "isDraft": false,
+        "number": 7,
+        "state": "OPEN",
+        "title": "docs: add cloud handoff and complete Windows v0.3 specification",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/7"
+      },
+      {
+        "baseRefName": "feat/knowledge-workspace-v0.3",
+        "headRefName": "docs/repository-guide-20261106",
+        "headRefOid": "54d2699645ab964dc7305f4cf302ff92b69e001e",
+        "isDraft": false,
+        "number": 6,
+        "state": "OPEN",
+        "title": "docs: clarify repository responsibilities and cloud development",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/6"
+      },
+      {
+        "baseRefName": "migration/v0.1-protocol",
+        "headRefName": "docs/capture-fidelity",
+        "headRefOid": "cf0ce7af326ee72f2db1fffefb7b6e325f91004f",
+        "isDraft": true,
+        "number": 5,
+        "state": "OPEN",
+        "title": "Preserve Capture fidelity and verification design",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/5"
+      },
+      {
+        "baseRefName": "feat/editor-v0.2",
+        "headRefName": "feat/knowledge-workspace-v0.3",
+        "headRefOid": "ab913b063437d9ba31ba19f9029167ecbd16626d",
+        "isDraft": true,
+        "number": 4,
+        "state": "OPEN",
+        "title": "Specify v0.3 workspace UI and navigation design",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/4"
+      },
+      {
+        "baseRefName": "feat/reconciliation-v0.1.1",
+        "headRefName": "feat/editor-v0.2",
+        "headRefOid": "55ed45bd03a170d3a2025fe5d2322d3968c95ca6",
+        "isDraft": false,
+        "number": 3,
+        "state": "OPEN",
+        "title": "v0.2 source editor and recovery contract",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/3"
+      },
+      {
+        "baseRefName": "migration/v0.1-protocol",
+        "headRefName": "feat/reconciliation-v0.1.1",
+        "headRefOid": "09d884c20acdf7ac4ebd3f7fd37a7fad7cd6ef79",
+        "isDraft": false,
+        "number": 2,
+        "state": "OPEN",
+        "title": "Specify Manifest v3 decision and recovery protocol",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/2"
+      },
+      {
+        "baseRefName": "main",
+        "headRefName": "migration/v0.1-protocol",
+        "headRefOid": "1a2e790e236471d14f9d8573e59d2ff32978a2e6",
+        "isDraft": false,
+        "number": 1,
+        "state": "OPEN",
+        "title": "迁入 Collations v0.1 协议与工程文档",
+        "url": "https://github.com/Tsi-sheng/collations-docs/pull/1"
+      }
+    ]
+  }
+}

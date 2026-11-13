@@ -1,5 +1,27 @@
 # 当前任务板
 
+更新2026-11-13（Asia/Shanghai）。main维护；当前表优先于历史记录。基线见[交接](../../HANDOFF.md)，不启动后台任务。
+
+| ID | 负责人/范围 | 状态/下一关口 |
+|---|---|---|
+| COL-CLOSE-03 | main文档，review只读；docs75255b2 | 本批收尾，待文档PR审查 |
+| COL-TABS-01 | ui/regression/review；85237f5→94a23f2 | 实现及限定回归完成，桌面PR#8待审未合并 |
+| COL-HIST-DESIGN-01 | main/review；core4866927、desktop94a23f2；仅文档 | 本批协议接口审查，不写产品 |
+| COL-HIST-A | main；协议审查后独立core分支 | 未开始：对象、显式提交、完整性与比较 |
+| COL-HIST-B | main原生、ui任务视图、regression | 未开始，依赖A：恢复前保全与事务恢复 |
+| COL-COMPOSE-C | main核心、ui呈现 | 未开始，依赖固定版本读取；两讲义复用及冻结重建 |
+| COL-RELEASE-05 | main/regression | 未开始；检索/图谱缺口、备份和安装 |
+| COL-WIN-MANUAL | regression协调真人 | IME/DPI/安装/性能尚未验证 |
+| COL-WIN-02 | main单独分配 | os error 5根因未知，有新复现再诊断 |
+
+高级拆分/多窗口只设计；Codex、Capture、AI、同步、移动、Mac Bridge后排。新UI仍Figma优先，旧例外不自动扩展。本批无UI改动，不生成假截图。
+
+## 历史阅读方式
+
+以下“候选”“未开始”为当时快照，不覆盖当前表；准确历史版本与测试保留。
+
+# 历史任务记录（2026-11-07 起）
+
 核实日期：2026-11-07（Asia/Shanghai）。由主控维护；执行窗口提交交接，不同时改此表。开始执行前核对远程与任务授权，本表不启动后台任务。
 
 | ID | 负责人 | 起点与允许范围 | 验收与当前状态 |

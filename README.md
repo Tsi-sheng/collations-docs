@@ -1,10 +1,12 @@
 # collations-docs
 
+> 当前入口（2026-11-13）：[HANDOFF](HANDOFF.md) · [任务板](docs/development/task-board.md) · [94a23f2证据](docs/development/handoffs/2026-11-13-v03-closeout.md)。旧版本引用保留为历史来源。
+
 ## 定位与状态
 
 Collations（秩笺）项目与平台文档仓库，维护架构、协议、ADR、路线图，并逐步补充使用指南、教程及开发文档。**活跃维护，保留现有名称。**
 
-核实日期：2026-11-06。本说明对应 [`ab913b0`](https://github.com/Tsi-sheng/collations-docs/tree/ab913b063437d9ba31ba19f9029167ecbd16626d)（`feat/knowledge-workspace-v0.3`），[设计 PR #4](https://github.com/Tsi-sheng/collations-docs/pull/4) 尚待审查。规范描述目标与约束，不代表全部功能已经实现。
+历史README基线（2026-11-06）：本说明原对应 [`ab913b0`](https://github.com/Tsi-sheng/collations-docs/tree/ab913b063437d9ba31ba19f9029167ecbd16626d)（`feat/knowledge-workspace-v0.3`），[设计 PR #4](https://github.com/Tsi-sheng/collations-docs/pull/4) 尚待审查。规范描述目标与约束，不代表全部功能已经实现。
 
 ## 职责边界
 
@@ -30,7 +32,7 @@ Collations（秩笺）项目与平台文档仓库，维护架构、协议、ADR�
 - [编辑会话与安全保存](docs/adr/0005-source-editor.md)
 - [v0.3 工作区 UI 与链接索引设计](docs/adr/0006-workspace-ui.md)
 
-原始 [core 协议样例版本](https://github.com/Tsi-sheng/collations-core/tree/2ac06c13549469b57696ec99e33056ad051ff9f9) 继续作为协议迁移基线。v3 身份协调和 v0.2 编辑器已有实现；core v0.3 链接基础已提交，desktop 完整 UI 与关系索引集成仍待开发。版本仓库和完整汇编器仍属于后续里程碑。
+原始 [core 协议样例版本](https://github.com/Tsi-sheng/collations-core/tree/2ac06c13549469b57696ec99e33056ad051ff9f9) 继续作为协议迁移基线。v3 身份协调和 v0.2 编辑器已有实现；core v0.3 链接基础已提交，desktop 单窗口UI、关系索引及标签切换已在94a23f2分支实现，限定验收见当前交接，尚未合并。版本仓库和完整汇编器仍属于后续里程碑。
 
 [Capture 设计 PR #5](https://github.com/Tsi-sheng/collations-docs/pull/5) 位于独立分支；其中回归规范是未来实现的验收设计，不是已执行的 Capture 测试。旧协议和路线图中的目标以对应阶段实现及测试记录核实，持久格式以相关 ADR 的版本说明为准。
 
@@ -56,11 +58,11 @@ Codex 云端承担代码与通用验证，desktop 的 Windows CI 承担原生构
 
 ## 关联文档和后续工作
 
-以 [路线图](docs/ROADMAP.md) 和上述 ADR 组织里程碑。下一步补齐 v0.3 实现对应的验收记录、云端环境准备与可复现发布说明；不通过改名、删仓或重写历史来代替职责澄清。
+以 [路线图](docs/ROADMAP.md) 和上述 ADR 组织里程碑。下一步审查版本历史协议与接口，独立跟进云端环境、真人验收和发布准备；不通过改名、删仓或重写历史来代替职责澄清。
 
 ## 云端接续开发
 
-- [多对话协作、模型建议与启动说明](docs/development/codex-collaboration.md)及[当前任务板](docs/development/task-board.md)（2026-11-07 更新，优先于旧交接快照核对本轮基线）
+- [多对话协作、模型建议与启动说明](docs/development/codex-collaboration.md)及[当前任务板](docs/development/task-board.md)（当前表优先于历史记录）
 - [总交接：基线、PR 依赖、验证与待办](HANDOFF.md)
 - [Windows v0.3 最终需求与视觉参考](docs/specs/windows-v0.3.md)
 
