@@ -51,3 +51,5 @@ core 根目录：npm ci、npm run check、npm test；协议样例：node --test 
 ## 下一任务协议入口
 
 [HistoryStore ADR（待审）](docs/adr/0008-history-store.md) · [v0.4协议与接口审查方案](docs/specs/history-v0.4.md)。先审查A的存储与B的恢复边界，再启动A1实现。
+
+本批[交接收尾PR #13](https://github.com/Tsi-sheng/collations-docs/pull/13) → [协议审查PR #14](https://github.com/Tsi-sheng/collations-docs/pull/14)，均不自动合并。[执行与审查记录](docs/development/handoffs/2026-11-13-history-contract-review.md)明确本批只完成文档，历史实现尚未开始。
