@@ -1,5 +1,7 @@
 # 架构与平台
 
+2026-11-13实现边界：以下对象/版本/汇编接口描述目标架构，当前core只有身份、解析、协调、预览及关系基础。历史新增契约见[ADR0008](adr/0008-history-store.md)和[实施方案](specs/history-v0.4.md)，本批不改产品。
+
 桌面端位于 collations-desktop，负责 Tauri、Windows 文件访问与 SQLite。collations-web 承担浏览器客户端职责。React 文件树与 CodeMirror 6 共享活动文档 ID，KaTeX 预览使用当前缓冲区。Vite 构建界面。Tauri 2 命令以已打开工作区为边界，校验相对路径和符号链接的最终目标。
 
 collations-core 以 TypeScript 实现身份、Markdown 语法树解析、链接解析、版本清单和汇编。文件接口提供列举、读取、带预期哈希的替换和监听；对象接口按 SHA-256 读写字节；索引接口按文档事务替换块、全文和出边。反链通过查询入边获得。UI 和未来的 API 调用这些用例。
