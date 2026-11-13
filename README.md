@@ -68,3 +68,7 @@ Codex 云端承担代码与通用验证，desktop 的 Windows CI 承担原生构
 ## 工作区 UI 设计续作
 
 [轻量写作与完整定制规范](docs/ui/workspace-customization.md) · [画板、状态与原型清单](docs/ui/workspace-customization-states.md)。这是独立设计扩展，画板与新截图仍待 Figma 访问恢复，不表示多窗口或完整定制已经实现。
+
+## 单窗口前端实施
+
+本批用户批准 [按规范先实施、以真实程序截图验收](docs/specs/single-window-ui-integration.md)；仅本批例外，Figma新图未完成。[UI偏好ADR](docs/adr/0007-ui-preferences.md)记录独立v1本机格式与损坏恢复，不改变Manifest。实现和测试见 [Windows 验收、截图与定向复验](docs/ui/2026-11-12-85237f5-acceptance.md)。

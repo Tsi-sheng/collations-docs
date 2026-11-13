@@ -42,3 +42,7 @@ COL-CMD-01 完成证据见 [当次记录](handoffs/COL-CMD-01-main.md)。最终�
 main协调，ui为唯一画布写入者，review只读审查交互及数据边界。新增 [交互规范](../ui/workspace-customization.md)及[状态清单](../ui/workspace-customization-states.md)，目标为三批画板、两条原型。当前仅文档草案；Figma访问及本次截图未验收。不修改desktop PR #5，不运行smoke，不开始独立窗口实现。原有COL-UI-01轻量布局需求由该规范继续覆盖。
 
 COL-UI-DESIGN-02规范修订已获review定向复核：1P2+2P3关闭，24逻辑状态/2原型路径保留。用户确认权限或连接已调整后，ui的create_session遇连接传输失败，根读取未执行；Figma画板和截图仍未完成。详细证据见 [交付记录](../ui/2026-11-07-workspace-customization-delivery.md)。
+
+## COL-UI-IMPLEMENT-01：单窗口前端接入
+
+用户批准本批按已审查规范先实现，以真实程序截图验收，Figma新图保持未完成；例外仅本批。范围见 [实施约定](../specs/single-window-ui-integration.md)。ui在干净678e47e基础独占src和获准tests，main写文档，regression只读准备待固定提交，review后续只读审查。core本轮类型检查与12测试已通过；不改native持久化，不开始COL-WIN-02。桌面 PR #7 的最终构建 85237f5 在真实 Windows 上七项 smoke 全部通过，已保存四种视口实机截图。见 [Windows 验收与定向复验](../ui/2026-11-12-85237f5-acceptance.md)。Figma、真人 IME、实际系统缩放、性能与安装验收仍待执行。
